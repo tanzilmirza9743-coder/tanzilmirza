@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanzil Alam | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0b1120; color: white; scroll-behavior: smooth; overflow-x: hidden; font-family: 'Inter', sans-serif; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; cursor: pointer; }
+        .glass-card:hover { border-color: #22d3ee; transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(34, 211, 238, 0.2); }
+        .profile-glow { border: 4px solid #22d3ee; box-shadow: 0 0 25px rgba(34, 211, 238, 0.5); }
+        .skill-icon { font-size: 2.5rem; background: linear-gradient(90deg, #22d3ee, #3b82f6); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        #lightbox { display: none; position: fixed; z-index: 100; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; padding: 20px; }
+        #lightbox img { max-width: 90%; max-height: 85%; border-radius: 8px; box-shadow: 0 0 30px rgba(34, 211, 238, 0.3); }
+        
+        /* Form Styling */
+        .contact-input { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px; width: 100%; outline: none; transition: 0.3s; }
+        .contact-input:focus { border-color: #22d3ee; background: rgba(255,255,255,0.08); }
+    </style>
+</head>
+<body>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <span class="absolute top-10 right-10 text-4xl cursor-pointer text-white">&times;</span>
+        <img id="lightbox-img" src="" alt="Certificate Preview">
+    </div>
+
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center bg-slate-950/90 backdrop-blur-sm border-b border-white/5">
+        <div class="text-2xl font-bold tracking-widest uppercase">TANZIL<span class="text-cyan-400">.PETROLEUM ENGINEER</span></div>
+        <div class="space-x-8 text-xs font-semibold uppercase tracking-widest hidden md:flex">
+            <a href="#home" class="hover:text-cyan-400 transition">Home</a>
+            <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
+            <a href="#certifications" class="hover:text-cyan-400 transition">Certifications</a>
+            <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center px-10 gap-16 pt-20">
+        <div class="md:w-1/2 animate__animated animate__fadeInLeft">
+            <h4 class="text-cyan-400 font-mono tracking-widest mb-4">PETROLEUM ENGINEER</h4>
+            <h1 class="text-6xl md:text-7xl font-black mb-6 leading-tight uppercase">I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Tanzil</span></h1>
+            <p class="text-lg text-gray-400 mb-10 max-w-lg leading-relaxed">
+            
+              Aspiring 2nd Year Petroleum Engineer | Parul University | Eager to Learn & Connect with Future Oil and Gas Professional Leaders, SPE Parul University Student Chapter OFFICER,
+              Specializing in Upstream Operations and Sustainable Energy . 
+              
+            </p>
+            <a href="#contact" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-10 py-4 rounded-full font-bold transition-all inline-block">Connect Now</a>
+        </div>
+        
+        <div class="md:w-1/3 flex justify-center animate__animated animate__zoomIn">
+            <div class="relative">
+                <img src="WhatsApp Image 2026-01-29 at 9.32.21 PM.jpeg" alt="Tanzil Alam" class="w-72 h-72 md:w-96 md:h-96 object-cover rounded-full profile-glow relative z-10">
+                <div class="absolute -inset-4 bg-cyan-500/20 rounded-full blur-2xl animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-10">
+            <h2 class="text-4xl font-black mb-16 text-center tracking-tight">Tech <span class="text-cyan-400">Stack</span></h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="glass-card p-10 rounded-3xl text-center">
+                    <i class="fas fa-chart-line skill-icon mb-4"></i>
+                    <h3 class="font-bold text-lg">Power BI</h3>
+                </div>
+                <div class="glass-card p-10 rounded-3xl text-center">
+                    <i class="fas fa-file-excel skill-icon mb-4"></i>
+                    <h3 class="font-bold text-lg">Excel</h3>
+                </div>
+                <div class="glass-card p-10 rounded-3xl text-center">
+                    <i class="fas fa-file-word skill-icon mb-4"></i>
+                    <h3 class="font-bold text-lg">MS Word</h3>
+                </div>
+                <div class="glass-card p-10 rounded-3xl text-center">
+                    <i class="fas fa-terminal skill-icon mb-4"></i>
+                    <h3 class="font-bold text-lg">C Language</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-24 bg-slate-900/30">
+        <div class="max-w-6xl mx-auto px-10">
+            <h2 class="text-4xl font-black mb-4 uppercase tracking-tighter">Certifications</h2>
+            <p class="text-gray-500 mb-12">Click a card to view the verified credential.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="glass-card p-8 rounded-2xl flex items-start gap-6" onclick="openLightbox('Screenshot 2026-01-29 155500.png')">
+                    <div class="logo-box" style="width: 80px; height: 80px;"><img src="iwcf.jpeg" alt="IWCF Level 1 Logo" class="w-full h-full object-cover rounded-lg"></div>
+                    <div>
+                        <h3 class="text-xl font-bold">IWCF Level 1 Programme</h3>
+                        <p class="text-gray-500 text-sm mt-1">International Well Control Forum [cite: 58]</p>
+                        <p class="text-cyan-400 text-xs mt-3 font-mono">ID: L1P_11987616012026</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl flex items-start gap-6" onclick="openLightbox('Screenshot 2026-01-29 163757.png')">
+                    <div class="logo-box" style="width: 80px; height: 80px;"><img src="iwcf.jpeg" alt="Well Operations CRM Logo" class="w-full h-full object-cover rounded-lg"></div>
+                    <div>
+                        <h3 class="text-xl font-bold">Well Operations CRM</h3>
+                        <p class="text-gray-500 text-sm mt-1">Crew Resource Management Certification</p>
+                        <p class="text-cyan-400 text-xs mt-3 font-mono">ID: WOCR_3626524012026</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl flex items-start gap-6" onclick="openLightbox('Screenshot 2026-01-29 164829.png')">
+                    <div class="logo-box" style="width: 80px; height: 80px;"><img src="Screenshot 2026-01-29 222907.png" alt="Piping & Process Plant Eng Logo" class="w-full h-full object-cover rounded-lg"></div>
+                    <div>
+                        <h3 class="text-xl font-bold">Piping & Process Plant Eng.</h3>
+                        <p class="text-gray-500 text-sm mt-1">Parul University SPE Workshop [cite: 57]</p>
+                        <p class="text-cyan-400 text-xs mt-3 font-mono">Date: 12-14 Aug 2025</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl flex items-start gap-6" onclick="openLightbox('Screenshot 2026-01-29 173555.png')">
+                    <div class="logo-box border-cyan-400" style="width: 80px; height: 80px;"><img src="WhatsApp Image 2026-01-29 at 9.32.08 PM.jpeg" alt="Introduction to Drilling Logo" class="w-full h-full object-cover rounded-lg"></div>
+                    <div>
+                        <h3 class="text-xl font-bold">Introduction To Drilling</h3>
+                        <p class="text-gray-500 text-sm mt-1">Learn to Drill Certification </p>
+                        <p class="text-gray-400 text-xs mt-3 italic">Digital Credential</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-24 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-10">
+            <h2 class="text-5xl font-black mb-16 text-center uppercase tracking-tighter">Get In <span class="text-cyan-400">Touch</span></h2>
+            
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="space-y-8 animate__animated animate__fadeInUp">
+                    <h3 class="text-2xl font-bold">Contact Information</h3>
+                    <p class="text-gray-400 leading-relaxed">I am currently looking for internship opportunities in the upstream sector. Feel free to reach out via any of these channels.</p>
+                    
+                    <div class="space-y-6">
+                        <a href="mailto:tanzilmirza9743@gmail.com" class="flex items-center gap-4 text-gray-300 hover:text-cyan-400 transition group">
+                            <div class="bg-white/5 p-4 rounded-full group-hover:bg-cyan-500/10 transition"><i class="fas fa-envelope text-xl"></i></div>
+                            <span>tanzilmirza9743@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/tanzil-alam-056369363" target="_blank" class="flex items-center gap-4 text-gray-300 hover:text-cyan-400 transition group">
+                            <div class="bg-white/5 p-4 rounded-full group-hover:bg-cyan-500/10 transition"><i class="fab fa-linkedin text-xl"></i></div>
+                            <span>linkedin.com/in/tanzil-alam</span>
+                        </a>
+                        <a href="tel:+917439373402" class="flex items-center gap-4 text-gray-300 hover:text-cyan-400 transition group">
+                            <div class="bg-white/5 p-4 rounded-full group-hover:bg-cyan-500/10 transition"><i class="fas fa-phone text-xl"></i></div>
+                            <span>+91 74393 73402</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-3xl animate__animated animate__fadeInUp">
+                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('Message sent simulated!');">
+                        <div>
+                            <label class="text-xs uppercase font-bold text-gray-500 ml-1">Your Name</label>
+                            <input type="text" class="contact-input" placeholder="Enter name">
+                        </div>
+                        <div>
+                            <label class="text-xs uppercase font-bold text-gray-500 ml-1">Email Address</label>
+                            <input type="email" class="contact-input" placeholder="email@example.com">
+                        </div>
+                        <div>
+                            <label class="text-xs uppercase font-bold text-gray-500 ml-1">Message</label>
+                            <textarea class="contact-input h-32" placeholder="How can I help you?"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold py-4 rounded-xl transition shadow-lg shadow-cyan-500/20">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center border-t border-white/5 bg-slate-950">
+        <p class="text-xs tracking-widest text-gray-600 uppercase">Tanzil Alam &bull; Parul University &bull; 2026</p>
+    </footer>
+
+    <script>
+        function openLightbox(imgSrc) {
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox').style.display = 'flex';
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+            document.body.style.overflow = 'auto'; 
+        }
+    </script>
+
+</body>
+</html>
